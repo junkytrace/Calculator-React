@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, rgb(255, 159, 160), rgb(255, 124, 124));
+}
+hr {
+  width: 90%;
+}
+.container {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  width: 256px;
+  text-align: center;
+  /* border: 20px solid; */
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.582), 0 0 0 20px rgb(252, 172, 171);
+
+  /* border-color: rgb(250, 162, 161); */
+  background: linear-gradient(
+    to bottom right,
+    rgb(40, 82, 143),
+    rgb(58, 119, 208)
+  );
+  border-radius: 5px;
+  /* box-shadow: 10px 5px 5px rgb(0, 0, 0); */
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(60px, auto);
+}
+
+input[type="text"] {
+  height: 40px;
+  width: 249px;
+  background-color: rgba(0, 255, 255, 0);
+  border: 0px;
+  color: white;
+  text-align: right;
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+button {
+  margin: 5px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: rgba(240, 248, 255, 0);
+  color: white;
+  font-weight: 500;
+}
+button:hover {
+  background-color: rgba(240, 248, 255, 0.103);
+}
+
+#result {
+  background-color: white;
+  color: rgb(58, 119, 208);
+}
+#result:hover {
+  background-color: rgba(240, 248, 255, 0.103);
+  color: white;
+}
+#resval {
+  height: 75px;
+  width: 249px;
+  background-color: rgba(0, 255, 255, 0);
+  border: 0px;
+  color: white;
+  text-align: right;
+  font-size: 15px;
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+  outline: none;
+}
