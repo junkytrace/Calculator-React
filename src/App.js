@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import "./App.css";
+import * as math from "mathjs";
+
 const App = () => {
   const [result, setResult] = useState("");
   const [resultValue, setResultValue] = useState("");
   const [resultBefore, setResultBefore] = useState("");
 
-  //   const handleClick = (e) => {
-  //     setResultValue(resultValue.concat(e.target.name));
-  //   };
   const handleClick = (e) => {
     setResultBefore(resultBefore.concat(e.target.name));
     setResultValue(
@@ -21,7 +20,7 @@ const App = () => {
   };
   const calculate = () => {
     try {
-      setResult(eval(resultBefore));
+      setResult(math.evaluate(resultBefore));
     } catch {
       setResult("Error");
     }
